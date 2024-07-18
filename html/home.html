@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Local css -->
+  <link rel="stylesheet" href="../css/home.css">
+
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Table Management</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header">
+        <h2>Table Management</h2>
+      </div>
+      <div class="menu ">
+        <i class='bx bx-menu menu-toggler' onclick="showMenu()" ></i>
+      </div>
+      <nav>
+        <ul>
+          <li><a href=""><i class='bx bxs-cog'></i></a></li>
+          <li><i class='bx bxs-sun'></i></li>
+          <li>
+            <div class="account">
+              <a href=""></a><i class='bx bx-user' ></i>
+              <p>basithkc@gmail.com</p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Menu for displaying smaller screens-->   
+    <div class="menu-small">
+      <ul>
+        <li>
+          <a href=""><i class='bx bxs-cog'></i> Settings</a>
+        </li>
+        <li>
+          <i class='bx bxs-sun'>Change</i>
+        </li>
+        <li >
+          <div class="account" >
+            <a href=""></a><i class='bx bx-user' ></i>
+            <p>basithkc@gmail.com</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="main">
+    <div class="top">
+      <div class="search">
+        <input type="search" name="" id="" placeholder="Search table">
+        <i class='bx bx-search'></i>
+      </div>
+      <button id="createTableBtn" class="create-button">Create +</button>
+    </div>
+
+    <div id="table-grid">
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>Create Table</h2>
+      <input id="tableName" type="text" placeholder="Table Name" required>
+      <p for="tableType" style="margin-top: 10px;">Table Type:</p>
+      <div class="image-option">
+        <input type="radio" name="tableType" id="squareTable" value="square" required>
+        <label for="squareTable">
+          <img src="../assets/square-table.jpeg" alt="">
+          <span>Square Table</span>
+        </label>
+      </div>
+      <div class="image-option">
+        <input type="radio" name="tableType" id="roundedTable" value="round" required>
+        <label for="roundedTable">
+          <img src="../assets/round-table.jpeg" alt="">
+          <span>Round Table</span>
+        </label>
+      </div>
+     
+      <select name="" id="seats">
+         <option value="" disabled selected>No. of Seats</option>
+         <option value="4">4</option>
+        <option value="8">8</option>
+       </select>
+      <div class="button-group">
+        <button type="submit" class="btn" id="addTableBtn">Add Table</button>
+        <button class="btn" id="cancelBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <!-- local script -->
+  <script  src="../js/home.js"></script>
+
+</body>
+</html>

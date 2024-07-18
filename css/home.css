@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+/* Header */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid gainsboro;
+}
+header .container nav {
+  display: none;
+}
+header .container nav ul {
+  list-style: none;
+}
+header .container nav ul {
+  display: flex;
+  align-items: center;
+}
+header .container nav ul li {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.account {
+  display: flex;
+  gap: 10px;
+  border: 1px solid gray;
+  padding: 5px;
+}
+.menu {
+  font-size: 1.4rem;
+}
+.menu-small {
+  width: 100%;
+  height: 100vh;
+  font-size: 1.2rem;
+  display: none;
+  transition: all 1s linear;
+}
+.menu-small ul li {
+  border-bottom: 1px solid;
+  padding: 10px;
+  cursor: pointer;
+}
+.menu-small ul li a {
+  color: #000;
+}
+
+/* /Header */
+
+/* Main */
+.main {
+  /* background-color: black; */
+  padding: 35px;
+}
+.main .top {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.main .top .search {
+  position: relative;
+}
+.main .top input {
+  width: 100%;
+  padding: 8px;
+}
+.main .top .bx {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  font-size: 1.2rem;
+}
+.main .top .create-button {
+  padding: 10px;
+  width: 150px;
+  background-color: green;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+}
+#table-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto-fit, minmax(200px, 1fr);
+}
+.table-card {
+  border: 1px solid gainsboro;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.table-card img {
+  width: 100%;
+}
+.card-heading {
+  border-bottom: 1px solid gainsboro;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  width: 100%;
+}
+.card-seat {
+  padding: 10px;
+}
+/* Modal */
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+#modal .modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 4px;
+}
+#modal .modal-content input,
+#modal .modal-content select {
+  margin-top: 40px;
+  padding: 10px;
+  width: 100%;
+}
+#modal .modal-content .button-group {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.button-group .btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.image-option {
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.image-option input[type='radio'] {
+  display: none;
+}
+.image-option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.image-option img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+.image-option span {
+  margin-top: 5px;
+}
+.image-option input[type='radio']:hover + label img {
+  border-color: #4caf50;
+}
+.image-option input[type='radio']:checked + label img {
+  border-color: #4caf50;
+}
+#addTableBtn {
+  background-color: blue;
+  color: white;
+}
+#cancelBtn {
+  background-color: red;
+  color: white;
+}
+/* /Main */
+.dark {
+  background-color: rgb(49, 48, 48);
+  color: white;
+}
+@media (min-width: 600px) {
+  header .container nav {
+    display: flex;
+  }
+  .menu {
+    display: none;
+  }
+  .main .top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+@media (min-width: 501px) and (max-width: 800px) {
+  #table-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 801px) {
+  #table-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
