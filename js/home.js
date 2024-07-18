@@ -68,6 +68,8 @@ document.getElementById('addTableBtn').addEventListener('click', () => {
     //Hiding the modal
     modal.style.display = 'none'
     resetForm()
+  } else {
+    alert('provide full details')
   }
 })
 
